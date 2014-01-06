@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface PLAppDelegate : UIResponder <UIApplicationDelegate>
+
+
+#import <AVFoundation/AVAudioPlayer.h>
+@interface PLAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
+{
+    SystemSoundID notifSound;
+}
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) AVAudioPlayer *player;
 @end
